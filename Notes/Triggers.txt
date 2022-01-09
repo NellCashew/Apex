@@ -1,0 +1,19 @@
+trigger ImoveisTrigger on Imoveis__c (before insert, before update) {
+
+    if(Trigger.isInsert || Trigger.isUpdate){
+
+	// Lista de registros novos --> Trigger.new
+	        
+        for(Imoveis__c imv : Trigger.new){            
+            if(imv.Valor__c <= 100000){
+                imv.Classificacao__c = 'Bronze';          
+            } 
+            if(imv.Valor__c >100000 && imv.Valor__c <= 350000){
+                imv.Classificacao__c = 'Prata';
+            }
+            if(imv.Valor__c > 350000){
+                imv.Classificacao__c = 'Ouro';
+            }
+        }          
+    }   
+}

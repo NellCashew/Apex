@@ -1,0 +1,16 @@
+public class AulaVariaveis {
+    
+    //  Tipos primitivos
+    
+    String palavra ='ForceNoob';
+    Integer numeros = 094;
+    Boolean check = true;
+    Decimal taxa = 2.13;
+        
+    // Tipos específicos SF
+    
+    Id IdAccount = 'a015f00000APYBYAA5';
+    Imoveis__c casa = new Imoveis__c(); // Cria um sObject
+    
+
+}
